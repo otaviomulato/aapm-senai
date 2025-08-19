@@ -18,7 +18,7 @@ module.exports = {
         'vermelho': '#F95738',
         'verde': '#A5BE00',
         'vermelhosenai': '#FF0000',
-        'amarelopan': '#F8C956',
+        'amarelopan': '#FFFDF8',
       },
     },
   },
