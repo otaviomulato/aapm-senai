@@ -79,6 +79,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
     
+    /*
     const descricoes = {
         futsal: `
             <div class="bg-creme text-gray-800 p-6 rounded-lg shadow-lg">
@@ -109,7 +110,7 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
     }
-
+*/
     const swiper = new Swiper('.aapm-carousel', {
         effect: 'fade',
         loop: true,
