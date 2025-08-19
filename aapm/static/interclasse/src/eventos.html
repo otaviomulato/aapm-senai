@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="pt-br" class="scroll-smooth"> 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <title>Interclasses SENAI</title>
+    <link href="../dist/output.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="img/icone.png" sizes="180x180"/>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Bebas+Neue&family=Jomhuria&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="script.js" defer></script>
+</head>
+
+<body class="flex flex-col min-h-screen bg-azul">
+
+    <header class="w-full shadow-md sticky top-0 z-40">
+        <nav class="bg-vermelhosenai flex flex-wrap items-center justify-between px-4 md:px-6 py-2">
+            <a href="#" class="flex items-center gap-2">
+                <img src="img/teste.png" alt="Logo SENAI SP" class="h-10 w-auto">
+            </a>
+            <div class="flex items-center gap-x-4 md:gap-x-8 mt-2 md:mt-0">
+                <a href="#modalidades" class="nav-link text-white font-bold text-base md:text-lg hover:text-amarelopan transition-colors duration-300">Modalidades</a>
+                <a href="#aapm" class="nav-link text-white font-bold text-base md:text-lg hover:text-amarelopan transition-colors duration-300">AAPM</a>
+                <a href="#inscricoes" class="nav-link text-white font-bold text-base md:text-lg hover:text-amarelopan transition-colors duration-300">Inscrições</a>
+            </div>
+        </nav>
+        <div class="bg-amarelopan h-4 w-full"></div>
+    </header>
+
+    <main class="flex-grow">
+        <section id="modalidades" class="pt-12 px-4 text-center scroll-mt-24">
+            <div class="inline-flex flex-col items-center">
+                <h1 class="font-anton text-4xl sm:text-6xl lg:text-8xl font-bold text-creme text-center leading-none md:tracking-wider">
+                    INTERCLASSES SENAI GASPAR <br class="hidden sm:inline"> RICARDO JR. 2025
+                </h1>
+                <p class="font-anton text-4xl md:text-5xl font-bold text-vermelhosenai mt-8 animate-levitate tracking-widest">
+                    12/08 a 16/08
+                </p>
+            </div>
+            
+            <div class="max-w-4xl mx-auto">
+                <p class="text-white mt-6 leading-relaxed text-justify font-poppins-medium">
+                    Chegou o momento mais esperado pelos atletas do SENAI: o Interclasses! O evento, onde a rivalidade fica só em quadra, a torcida vibra a cada ponto e a diversão é mais que garantida, só é possível graças ao apoio incansável da AAPM do SENAI Gaspar Ricardo Jr., Santa Rosália, Sorocaba. Preparem-se para as competições mais acirradas e venham fazer parte dessa grande festa do esporte, um sonho que se realiza a cada ano!
+                </p>
+            </div>
+            
+            <h2 class="font-anton text-6xl sm:text-7xl md:text-8xl font-bold text-creme text-center mb-16 mt-20">Modalidades</h2>
+
+            <div class="max-w-5xl mx-auto mt-8 grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div data-modalidade="futsal" class="modalidade-card bg-creme rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300 cursor-pointer">
+                    <img src="img/futsal.png" alt="Modalidade Futsal" class="w-full h-48 object-cover">
+                </div>
+                <div data-modalidade="volei" class="modalidade-card bg-creme rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300 cursor-pointer">
+                    <img src="img/voleiiiii.png" alt="Modalidade Vôlei" class="w-full h-48 object-cover">
+                </div>
+                <div data-modalidade="tenis-de-mesa" class="modalidade-card bg-creme rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300 cursor-pointer">
+                    <img src="img/tenis_de_mesa.png" alt="Modalidade Tênis de Mesa" class="w-full h-48 object-cover">
+                </div>
+            </div>
+
+            <div id="modalidade-descricao" class="hidden max-w-4xl mx-auto mt-8">
+            </div>
+        </section>
+        
+        <section id="aapm" class="py-12 scroll-mt-24">
+            <h2 class="font-anton text-6xl sm:text-7xl md:text-8xl font-bold text-creme text-center mb-16">Razões para aderir a AAPM</h2>
+            <div class="swiper aapm-carousel relative w-full pb-8">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="img/inicial.png" class="w-full h-full object-contain" alt="Imagem inicial da AAPM"></div>
+                <div class="swiper-slide"><img src="img/wifi.png" class="w-full h-full object-contain" alt="Wi-Fi disponível"></div>
+                <div class="swiper-slide"><img src="img/espaco_aapm.png" class="w-full h-full object-contain" alt="Espaço da AAPM"></div>
+                <div class="swiper-slide"><img src="img/pia.png" class="w-full h-full object-contain" alt="Pia e micro-ondas"></div>
+                <div class="swiper-slide"><img src="img/bebedouro.png" class="w-full h-full object-contain" alt="Bebedouro"></div>
+                <div class="swiper-slide"><img src="img/sala_gamer.png" class="w-full h-full object-contain" alt="Sala Gamer"></div>
+                <div class="swiper-slide"><img src="img/ping_pong.png" class="w-full h-full object-contain" alt="Mesa de Ping Pong"></div>
+                <div class="swiper-slide"><img src="img/sorteio.png" class="w-full h-full object-contain" alt="Sorteio alexa"></div>
+                <div class="swiper-slide"><img src="img/final.png" class="w-full h-full object-contain" alt="Imagem final da AAPM"></div>
+              </div>
+              <div class="swiper-button-next hidden md:block"></div>
+              <div class="swiper-button-prev hidden md:block"></div>
+              <div class="swiper-pagination"></div>
+            </div>
+        </section>
+
+        <section class="py-12 px-4 scroll-mt-24">
+            <h2 class="font-anton text-6xl sm:text-7xl md:text-8xl font-bold text-creme text-center mb-16">Exemplos práticos</h2>
+            <div class="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="group relative bg-creme rounded-lg shadow-lg overflow-hidden">
+                    <img src="img/card1.jpg" alt="Mantenha sua comida agradável o dia todo com os micro-ondas e geladeiras" class="w-full h-80 object-cover transition-all duration-300 ease-in-out group-hover:blur-sm group-hover:brightness-75" />
+                    <div class="absolute inset-0 flex items-center justify-center p-4 bg-black bg-opacity-50 opacity-0 transition-opacity duration-300 ease-in-out group-hover:opacity-100">
+                        <p class="text-white text-center font-bold text-lg">Mantenha sua comida agradável o dia todo com os micro-ondas e geladeiras</p>
+                    </div>
+                </div>
+                <div class="group relative bg-creme rounded-lg shadow-lg overflow-hidden">
+                    <img src="img/card2.jpg" alt="Divirta-se na sala gamer e utilize o wifi onde quiser" class="w-full h-80 object-cover transition-all duration-300 ease-in-out group-hover:blur-sm group-hover:brightness-75" />
+                    <div class="absolute inset-0 flex items-center justify-center p-4 bg-black bg-opacity-50 opacity-0 transition-opacity duration-300 ease-in-out group-hover:opacity-100">
+                        <p class="text-white text-center font-bold text-lg">Divirta-se na sala gamer e utilize o wifi onde quiser</p>
+                    </div>
+                </div>
+                <div class="group relative bg-creme rounded-lg shadow-lg overflow-hidden">
+                    <img src="img/card3.png" alt="Aproveite os passeios irados, sorteios insanos e brindes maneiros só para associados" class="w-full h-80 object-cover transition-all duration-300 ease-in-out group-hover:blur-sm group-hover:brightness-75" />
+                    <div class="absolute inset-0 flex items-center justify-center p-4 bg-black bg-opacity-50 opacity-0 transition-opacity duration-300 ease-in-out group-hover:opacity-100">
+                        <p class="text-white text-center font-bold text-lg">Aproveite os passeios irados, sorteios insanos e brindes maneiros só para associados</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="inscricoes" class="py-16 px-4 scroll-mt-24">
+          <div class="max-w-lg mx-auto bg-gray-200 rounded-xl shadow-2xl p-6 md:p-8">
+            <form id="inscricao-form">
+              <div class="flex justify-between items-baseline mb-6">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800">Inscreva-se</h2>
+                <p class="text-xs text-gray-600">Período: 12/08 a 16/08</p>
+              </div>
+              <div class="mb-4">
+                <label for="nome" class="block text-gray-800 font-bold mb-1">Nome</label>
+                <input type="text" id="nome" name="nome" placeholder="Ex: Diana Mulato" class="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-laranja" required>
+              </div>
+              <div class="mb-4">
+                <label for="turma" class="block text-gray-800 font-bold mb-1">Turma</label>
+                <input type="text" id="turma" name="turma" placeholder="Ex: CT-DEV 2A" class="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-laranja" required>
+              </div>
+              <div class="mb-4">
+                <label for="telefone" class="block text-gray-800 font-bold mb-1">Telefone</label>
+                <input type="tel" id="telefone" name="telefone" placeholder="Ex: (11) 99999-9999" class="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-laranja" required>
+              </div>
+              <div class="mb-4">
+                <label for="email" class="block text-gray-800 font-bold mb-1">E-mail</label>
+                <input type="email" id="email" name="email" placeholder="Ex: diana@email.com" class="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-laranja" required>
+              </div>
+              <div class="mb-6">
+                <label for="modalidade" class="block text-gray-800 font-bold mb-1">Modalidade</label>
+                <select id="modalidade" name="modalidade" class="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-laranja bg-white" required>
+                  <option value="" disabled selected>Selecione uma opção</option>
+                  <option value="futsal">Futsal</option>
+                  <option value="volei">Vôlei</option>
+                  <option value="tenis-de-mesa">Tênis de Mesa</option>
+                </select>
+              </div>
+              <div class="mb-4">
+                <p class="block text-gray-800 font-bold mb-2">Possui um time?</p>
+                <div class="flex gap-4">
+                  <div>
+                    <input type="radio" id="time-sim" name="possui-time" value="sim" class="peer hidden">
+                    <label for="time-sim" class="px-4 py-2 block cursor-pointer rounded-lg border border-gray-400 peer-checked:bg-vermelhosenai peer-checked:text-white peer-checked:border-vermelho">Sim</label>
+                  </div>
+                  <div>
+                    <input type="radio" id="time-nao" name="possui-time" value="nao" class="peer hidden" checked>
+                    <label for="time-nao" class="px-4 py-2 block cursor-pointer rounded-lg border border-gray-400 peer-checked:bg-vermelhosenai peer-checked:text-white peer-checked:border-vermelho">Não</label>
+                  </div>
+                </div>
+                <div id="team-name-container" class="hidden mt-3">
+                  <label for="team-name" class="block text-gray-800 font-bold mb-1">Nome do Time</label>
+                  <input type="text" id="team-name" name="team-name" placeholder="Ex: Ophidiana" class="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-laranja">
+                </div>
+              </div>
+              <div class="mb-6">
+                <p class="block text-gray-800 font-bold mb-2">É sócio da AAPM?</p>
+                <div class="flex gap-4">
+                    <div>
+                      <input type="radio" id="socio-sim" name="socio-aapm" value="sim" class="peer hidden" checked>
+                      <label for="socio-sim" class="px-4 py-2 block cursor-pointer rounded-lg border border-gray-400 peer-checked:bg-vermelhosenai peer-checked:text-white peer-checked:border-vermelho">Sim</label>
+                    </div>
+                    <div>
+                      <input type="radio" id="socio-nao" name="socio-aapm" value="nao" class="peer hidden">
+                      <label for="socio-nao" class="px-4 py-2 block cursor-pointer rounded-lg border border-gray-400 peer-checked:bg-vermelhosenai peer-checked:text-white peer-checked:border-vermelho">Não</label>
+                    </div>
+                </div>
+                <div id="price-container" class="hidden mt-3">
+                  <p class="text-xl font-bold text-gray-800 bg-amarelopan/50 p-3 rounded-lg text-center">Taxa de Inscrição: R$25,00</p>
+                </div>
+              </div>
+              <button type="submit" class="w-full bg-verde text-white font-bold py-3 rounded-lg hover:bg-opacity-90 transition-transform transform hover:scale-105">
+                Inscrever-me
+              </button>
+            </form>
+          </div>
+          <div class="mt-8 mb-8 text-center">
+            <a href="#" target="_blank" class="inline-block bg-verde text-white font-bold py-3 px-12 rounded-lg hover:bg-opacity-90 transition-transform transform hover:scale-105">
+                Regulamento
+            </a>
+          </div>
+        </section>
+    </main>
+
+    <footer class="bg-vermelhosenai text-creme border-t-8 border-azul">
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 items-center text-center p-6">
+        <div class="flex justify-center">
+          <a href="https://sp.senai.br/unidade/sorocaba/" target="_blank"><img src="img/teste.png" alt="Logo SENAI SP" class="h-24"></a>
+        </div>
+        <div class="flex flex-col items-center gap-y-4">
+          <div class="flex gap-x-6">
+            <a href="https://www.facebook.com/aapmsenaisorocaba/" target="_blank" class="text-2xl hover:text-azul transition-colors"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/aapmsenaisorocaba/" target="_blank" class="text-2xl hover:text-azul transition-colors"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://wa.me/551532127410?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20o%20interclasses!" target="_blank" class="text-2xl hover:text-azul transition-colors"><i class="fa-brands fa-whatsapp"></i></a>
+          </div>
+          <p class="text-sm font-medium">Praça Roberto Mange, R. Santa Rosália, 30, Sorocaba - SP, 18090-110</p>
+          <p class="text-sm font-medium">contato@aapmsenaisorocaba.com.br</p>
+          <p class="text-xs">Copyright © 2025 Ophidiana - Todos os direitos reservados.</p>
+          <a href="https://github.com/otavio-mmulato" target="_blank"><img src="img/ophidiana.png" alt="Selo de Segurança Ophidiana" class="h-10 mt-2"></a>
+        </div>
+        <div class="flex justify-center">
+          <a href="https://aapmsenaisorocaba.com.br/" target="_blank"><img src="img/aapm.png" alt="Logo AAPM" class="h-32"></a>
+        </div>
+      </div>
+    </footer>
+</body>
+</html>

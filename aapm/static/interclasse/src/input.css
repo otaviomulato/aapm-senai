@@ -1,0 +1,34 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.aapm-carousel {
+  /* Setas*/
+  --swiper-navigation-color: #FAF0CA; 
+  --swiper-navigation-size: 30px;
+}
+
+/*Estilo das bolinhas de paginação*/
+.aapm-carousel .swiper-pagination-bullet {
+  background-color: #FAF0CA; 
+  opacity: 0.6;
+}
+
+.aapm-carousel .swiper-pagination-bullet-active {
+  background-color: #EE964B;
+  opacity: 1;
+}
+.scroll-active {
+        color: #ffc72c; /* Cor exata da sua classe 'amarelopan' para manter a consistência visual */
+      }
+  @keyframes levitate {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+  .animate-levitate {
+    animation: levitate 3s ease-in-out infinite;
+  }
