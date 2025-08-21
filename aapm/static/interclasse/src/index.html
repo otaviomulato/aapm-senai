@@ -34,7 +34,7 @@
             <div class="flex flex-col items-center gap-y-4 py-4 md:flex-row md:items-center md:gap-x-8 md:py-0">
                 <a href="index.html" class="nav-link text-white font-bold text-base md:text-lg hover:text-black transition-colors duration-300">Início</a>
                 <a href="eventos.html" class="nav-link text-white font-bold text-base md:text-lg hover:text-black transition-colors duration-300">Eventos</a>
-                <a href="eventos.html" class="nav-link text-white font-bold text-base md:text-lg hover:text-black transition-colors duration-300">Interclasse</a>
+                <a href="eventos.html#interclasses" class="nav-link text-white font-bold text-base md:text-lg hover:text-black transition-colors duration-300">Interclasse</a>
                 <a href="galeria.html" class="nav-link text-white font-bold text-base md:text-lg hover:text-black transition-colors duration-300">Galeria</a>
                 <a href="about_us.html" class="nav-link text-white font-bold text-base md:text-lg hover:text-black transition-colors duration-300">Sobre nós</a>
                 <a href="contact_us.html" class="nav-link text-white font-bold text-base md:text-lg hover:text-black transition-colors duration-300">Contate-nos</a>
@@ -43,39 +43,39 @@
     </nav>
 </header>
 <main>
-    <!--Aqui eu preciso da sua ajuda thiago!-->
-    <section class="relative w-full h-[60vh] min-h-[400px] md:h-[70vh] text-center overflow-hidden">
+    <section class="relative w-full h-[60vh] min-h-[400px] md:h-[70vh] flex items-center justify-center text-center overflow-hidden">
         
         <img 
             src="img/senas.jpeg" 
             alt="Fachada do SENAI Sorocaba" 
-            class="w-full h-full object-cover object-center transform transition-transform duration-[2000ms] ease-in-out scale-100 hover:scale-105"
+            class="absolute top-0 left-0 w-full h-full object-cover object-center"
         >
 
         <div class="absolute inset-0 bg-black bg-opacity-50"></div>
 
-        <div class="max-w-7xl mx-auto px-4">
-            <h2 class="text-3xl md:text-4xl font-bold text-brand-brown text-center mb-16">Razões para aderir a AAPM</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-y-16 md:gap-x-12">
-            </div>
+        <div class="relative z-10 p-4">
+             <h1 class="text-white text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight" style="text-shadow: 2px 2px 8px rgba(0,0,0,0.8);">
+                Bem-vindo à AAPM<br>SENAI Gaspar Ricardo Júnior
+            </h1>
         </div>
     </section>
 
     <section class="py-16 bg-gray-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-800 text-center mb-12">Razões para Aderir à AAPM</h2>
+            
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-
                 <div class="bg-white rounded-lg shadow-md overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
-                    <img class="w-full h-56 " src="img/aapm.png" alt="mim não saber ainda">
+                    <img class="w-full h-56" src="img/aapm.png" alt="Pagamento da AAPM">
                     <div class="p-6">
                         <p class="text-gray-700 leading-relaxed text-justify">
-                            A semestralidade da AAPM é de apenas R$80,00 – o que representa menos de R$15,00 por mês. E para facilitar ainda mais, é possível parcelar esse valor, garantindo que ele caiba no seu bolso. O pagamento pode ser feito em dinheiro, via Pix ou no cartão. Tudo pensado para que você aproveite ao máximo os benefícios de ser um associado!
+                            A semestralidade da AAPM é de apenas R$80,00 – o que representa menos de R$15,00 por mês. E para facilitar ainda mais, é possível parcelar esse valor, garantindo que ele caiba no seu bolso. O pagamento pode ser feito em dinheiro, via Pix ou no cartão.
                         </p>
                     </div>
                 </div>
 
                 <div class="bg-white rounded-lg shadow-md overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
-                    <img class="w-full h-56 object-cover" src="img/wifi_beneficio.jpg" alt="mim não saber ainda">
+                    <img class="w-full h-56 object-cover" src="img/wifi_beneficio.jpg" alt="Benefício de Wi-Fi">
                     <div class="p-6">
                         <p class="text-gray-700 leading-relaxed text-justify">
                             Conecte-se quando e onde quiser! Os associados AAPM têm acesso exclusivo e ilimitado ao Wi-Fi oferecido pela associação, economizando seus dados móveis.
@@ -84,15 +84,13 @@
                 </div>
 
                 <div class="bg-white rounded-lg shadow-md overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
-                    <img class="w-full h-56 object-cover" src="img/desconto.jpg" alt="mim não saber ainda">
+                    <img class="w-full h-56 object-cover" src="img/desconto.jpg" alt="Desconto na cantina">
                     <div class="p-6">
                         <p class="text-gray-700 leading-relaxed text-justify">
-                            Associe-se à AAPM e ganhe 5% de desconto na Cantina!
-Por exemplo: a cada 20 marmitas compradas com o desconto, você recebe o cashback equivalente a 1 marmita no total.
+                            Associe-se à AAPM e ganhe 5% de desconto na Cantina! Por exemplo: a cada 20 marmitas compradas com o desconto, você recebe o cashback equivalente a 1 marmita no total.
                         </p>
                     </div>
                 </div>
-
             </div>
         </div>
     </section>
@@ -101,7 +99,7 @@ Por exemplo: a cada 20 marmitas compradas com o desconto, você recebe o cashbac
 <section id="aapm" class="py-12 scroll-mt-24">
     <div class="max-w-7xl mx-auto px-4">
         <h2 class="text-3xl md:text-4xl font-bold text-brand-brown text-center mb-16">Razões para aderir a AAPM</h2>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-y-16 md:gap-x-12"></div> </div>
+    </div>
     <div class="swiper aapm-carousel relative w-full pb-8">
         <div class="swiper-wrapper">
             <div class="swiper-slide"><img src="img/inicial.png" class="w-full h-full object-contain" alt="Imagem inicial da AAPM"></div>
@@ -141,7 +139,7 @@ Por exemplo: a cada 20 marmitas compradas com o desconto, você recebe o cashbac
                     <div class="w-10 h-px bg-brand-brown mx-auto"></div>
                 </div>
                 <blockquote class="text-stone-700 italic flex-grow">"A AAPM é um pilar para o bem-estar coletivo moçada"</blockquote>
-                <cite class="mt-5 not-italic block font-bold text-lg text-brand-brown">Marcos Milk</cite>
+                <cite class="mt-5 not-italic block font-bold text-lg text-brand-brown">Marcos Leite</cite>
             </div>
 
             <div class="testimonial-card bg-amarelopan rounded-lg shadow-md p-8 flex flex-col items-center text-center transition-all duration-500 ease-out delay-400">
@@ -176,7 +174,7 @@ Por exemplo: a cada 20 marmitas compradas com o desconto, você recebe o cashbac
         </div>
         
         <div class="flex justify-center">
-            <a href="https://aapmsenaisorocaba.com.br/" target="_blank"><img src="img/aapm_branco.png" alt="Logo AAPM" class="h-48"></a>
+            <a href="index.html" target="_blank"><img src="img/aapm_branco.png" alt="Logo AAPM" class="h-48"></a>
         </div>
     </div>
 </footer>
