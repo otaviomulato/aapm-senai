@@ -1,49 +1,56 @@
 document.addEventListener('DOMContentLoaded', () => {
-
+    // Pega todas as seções que têm um ID dentro do <main>
     const sections = document.querySelectorAll('main section[id]');
-    const navLinks = document.querySelectorAll('header nav a.nav-link[href^="#"]');
-    const firstNavLink = navLinks.length > 0 ? navLinks[0] : null;
+    
+    // Pega todos os links de navegação
+    const navLinks = document.querySelectorAll('header nav a.nav-link');
+    
+    // Define um deslocamento para compensar a altura do header fixo
+    const headerOffset = 150; // Ajuste este valor se necessário
 
-    if (sections.length === 0 || navLinks.length === 0) {
-        console.log("Scroll Spy não iniciado: Seções com ID ou links de navegação não encontrados.");
-        return;
-    }
+    const handleScrollSpy = () => {
+        let currentSectionId = '';
 
-    const setActiveLink = (linkToActivate) => {
+        // Itera sobre cada seção para ver qual está na tela
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop;
+            
+            // Se a posição de rolagem passou do topo da seção (com o deslocamento)
+            if (window.scrollY >= sectionTop - headerOffset) {
+                currentSectionId = section.getAttribute('id');
+            }
+        });
+
+        // --- CORREÇÃO PARA A ÚLTIMA SEÇÃO ---
+        // Verifica se o usuário chegou ao final da página
+        const isAtBottom = (window.innerHeight + window.scrollY) >= document.body.offsetHeight - 2; // 2px de tolerância
+        if (isAtBottom) {
+            // Se estiver no final, força o ID para ser o da última seção
+            currentSectionId = sections[sections.length - 1].getAttribute('id');
+        }
+        // --- FIM DA CORREÇÃO ---
+
+        // Agora, itera sobre os links para ativar o correto
         navLinks.forEach(link => {
             link.classList.remove('scroll-active');
+
+            const linkHref = link.getAttribute('href');
+
+            if (`#${currentSectionId}` === linkHref) {
+                link.classList.add('scroll-active');
+            }
         });
-        if (linkToActivate) {
-            linkToActivate.classList.add('scroll-active');
+        
+        // Caso especial para o link 'Início'
+        if (currentSectionId === '') {
+            const homeLink = document.querySelector('header nav a[href="index.html"]');
+            if (homeLink) {
+                homeLink.classList.add('scroll-active');
+            }
         }
     };
 
-    const handleScroll = () => {
-        const topOfPageOffset = 200; 
-        if (window.scrollY < topOfPageOffset) {
-            setActiveLink(firstNavLink);
-        }
-    };
-
-    const observer = new IntersectionObserver(
-        (entries) => {
-            entries.forEach((entry) => {
-                if (entry.isIntersecting) {
-                    const id = entry.target.getAttribute('id');
-                    const activeLink = document.querySelector(`header nav a[href="#${id}"]`);
-                    setActiveLink(activeLink);
-                }
-            });
-        }, {
-            rootMargin: '0px 0px -40% 0px',
-        }
-    );
-
-    sections.forEach((section) => {
-        observer.observe(section);
-    });
-
-    window.addEventListener('scroll', handleScroll);
-    
-    handleScroll();
+    // Adiciona o listener de scroll e executa uma vez no carregamento
+    window.addEventListener('scroll', handleScrollSpy);
+    handleScrollSpy();
 });
