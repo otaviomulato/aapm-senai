@@ -9,7 +9,6 @@ document.addEventListener('DOMContentLoaded', () => {
         return;
     }
 
-    // Função para definir o link ativo
     const setActiveLink = (linkToActivate) => {
         navLinks.forEach(link => {
             link.classList.remove('scroll-active');
@@ -19,7 +18,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
 
-    // Lógica para o topo da página
     const handleScroll = () => {
         const topOfPageOffset = 200; 
         if (window.scrollY < topOfPageOffset) {
@@ -27,7 +25,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
 
-    // Observador para as seções
     const observer = new IntersectionObserver(
         (entries) => {
             entries.forEach((entry) => {
@@ -38,20 +35,14 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             });
         }, {
-            // ===== LÓGICA DE DETECÇÃO CORRIGIDA =====
-            // Define uma área de ativação que vai do topo da tela (0px)
-            // até 40% da altura da tela a partir do rodapé.
-            // Isso garante que mesmo a última seção (curta) seja detectada.
             rootMargin: '0px 0px -40% 0px',
         }
     );
 
-    // Ativa o observador para cada seção
     sections.forEach((section) => {
         observer.observe(section);
     });
 
-    // Ativa a lógica que cuida do topo da página
     window.addEventListener('scroll', handleScroll);
     
     handleScroll();
